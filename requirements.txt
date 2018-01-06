@@ -62,7 +62,6 @@ jobtastic==0.3.1
 jsonfield==1.0.3
 jsonpath-rw==1.4.0
 kombu==3.0.33
-ldap3==0.9.9
 lockfile==0.12.2
 lxml==3.5.0
 Mako==1.0.4
