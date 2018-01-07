@@ -30,7 +30,7 @@ SECRET_KEY = 'f^ows2b9m=k)jui#!1_t!1w!0=s98($7-ce2_2cbiyyd*$+o4-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'easecentral-hk.herokuapp.com']
 
 
 # Application definition
