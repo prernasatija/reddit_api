@@ -94,11 +94,9 @@ WSGI_APPLICATION = 'reddit_api.wsgi.application'
 #    }
 #}
 
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
 DATABASES = {
     'default': dj_database_url.config(
-        default=config('DATABASE_URL')
+        default='postgres://nvseoraadrgntr:807c954020aa1e24558cacd8550a688718eb18b5bec3e4f36155f4ca9120b99c@ec2-54-225-255-132.compute-1.amazonaws.com:5432/d6e6h1b6ggj4o')
     )
 }
 
