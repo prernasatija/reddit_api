@@ -83,15 +83,23 @@ WSGI_APPLICATION = 'reddit_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'HOST': '127.0.0.1',
+#        'PORT': '3306',
+#        'NAME': 'api',
+#        'USER': 'psatija',
+#        'PASSWORD':'local',
+#    }
+#}
+
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'NAME': 'api',
-        'USER': 'psatija',
-        'PASSWORD':'local',
-    }
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
 }
 
 
