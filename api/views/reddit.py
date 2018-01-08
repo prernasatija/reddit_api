@@ -45,9 +45,9 @@ def reddit(request):
 						article.author = tmp_dict['author']
 						article.save()
 					except:
-						print(tmp_dict['reddit_id'])
+						# to avoid saving dupicate article in the db.
 						continue
-				return HttpResponse(all_links)
+				return HttpResponse(json.dumps(all_links))
 			else:
 				if attempt == 30:
 					resp = HttpResponse(content_type='application/json', status=403)
