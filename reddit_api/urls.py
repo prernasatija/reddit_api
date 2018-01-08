@@ -22,8 +22,6 @@ from api.views import reddit
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/', include('api.urls')),
-    url(r'^get-auth-token/$', rest_framework_views.obtain_auth_token, name='get_auth_token'),
     url(r'^api/register/', register.register, name='register'),
     url(r'^api/login/', login.login_view, name='login'),
     url(r'^api/reddit/', reddit.reddit, name='reddit'),
